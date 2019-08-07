@@ -20,7 +20,7 @@ def won? (board)
     if board [i[0]] == "X" && board [i[1]] == "X" && board [i[2]] == "X"
       return i
     elsif board [i[0]] == "O" && board [i[1]] == "O" && board [i[2]] == "O"
-      return i 
+      return i
     end
   end
   return false
@@ -46,6 +46,3 @@ def winner (board)
     return nil
   end
 end
-      
-
-    
