@@ -20,6 +20,32 @@ def won? (board)
     if board [i[0]] == "X" && board [i[1]] == "X" && board [i[2]] == "X"
       return i
     elsif board [i[0]] == "O" && board [i[1]] == "O" && board [i[2]] == "O"
+      return i 
+    end
+  end
+  return false
+end
+
+def full? (board)
+  return !board.include?(" ")
+end
+
+def draw? (board)
+  return !won?(board) && full?(board)
+end
+
+def over? (board)
+  return won? (board) || draw?(baord) || full?(board)
+end
+
+def winner (board)
+  winner_array = won? (board)
+  if winner_array
+    return board [winner_array[0]]
+  else
+    return nil
+  end
+end
       
 
     
